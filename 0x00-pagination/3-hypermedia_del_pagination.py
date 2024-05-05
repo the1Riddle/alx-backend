@@ -40,14 +40,14 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-            """
-                Deletion-resilient hypermedia pagination 
-            """
-            assert type(index) is int and index < len(self.dataset())
-            return {
-                "index": index,
-                "data": self.dataset()[index: index + page_size],
-                "page_size": page_size,
-                "next_index": index + page_size
-                }
-            pass
+        """
+            Deletion-resilient hypermedia pagination
+        """
+        assert type(index) is int and index < len(self.dataset())
+        return {
+            "index": index,
+            "data": self.dataset()[index: index + page_size],
+            "page_size": page_size,
+            "next_index": index + page_size
+            }
+        pass
