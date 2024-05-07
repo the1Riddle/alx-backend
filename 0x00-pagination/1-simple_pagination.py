@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""
+some comments
+"""
 import csv
 import math
 from typing import List
