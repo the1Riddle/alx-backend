@@ -27,8 +27,8 @@ class LIFOCache(BaseCaching):
                 del self.cache_data[discard]
                 print("DISCARD: {}".format(discard))
 
-        self.cache_data[key] = item
-        self.cache_stack.append(key)
+            self.cache_data[key] = item
+            self.cache_stack.append(key)
 
     def get(self, key):
         """
