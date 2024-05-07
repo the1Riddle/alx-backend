@@ -21,7 +21,7 @@ class LIFOCache(BaseCaching):
             if key in self.cache_data:
                 self.cache_data[key] = item
                 self.cache_stack.remove(key)
-            if len(self.cache_data) >= BaseCaching.MAX_ITEMS:
+            elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 # Evict the least recently used item
                 discard = self.cache_stack.pop()
                 del self.cache_data[discard]
