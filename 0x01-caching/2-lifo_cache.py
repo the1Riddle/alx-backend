@@ -18,8 +18,7 @@ class LIFOCache(BaseCaching):
         Add an item to the cache
         """
         if key and item:
-            if key in self.cache_data:
-                self.cache_data[key] = item
+            if key in self.cache_data: 
                 self.cache_stack.remove(key)
             elif len(self.cache_data) >= BaseCaching.MAX_ITEMS:
                 # Evict the least recently used item
