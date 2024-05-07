@@ -2,13 +2,14 @@
 """
 MRU caching
 """
-BaseCaching = __import__('base_caching').BaseCaching
+BaseCaching = __import__("base_caching").BaseCaching
 
 
 class MRUCache(BaseCaching):
     """
     a MRU class that inherits from base caching
     """
+
     def __init__(self):
         """constractor"""
         super().__init__()
@@ -37,4 +38,3 @@ class MRUCache(BaseCaching):
             self.mru_keys.append(key)
             return self.cache_data[key]
         return None
-
